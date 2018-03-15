@@ -6,24 +6,20 @@
     android:layout_height="match_parent"
     tools:context="com.bignerdranch.android.geoquiz.QuizActivity">
 
-
-    <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="495dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
-
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <TextView
             android:id="@+id/question_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:padding="24dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
             android:orientation="horizontal">
 
             <Button
@@ -45,25 +41,24 @@
             android:id="@+id/cheat_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
             android:text="@string/cheat_button" />
 
-        <LinearLayout
+        <ImageButton
+            android:id="@+id/image_button_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageButton
-                android:id="@+id/image_button_left"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arrow_left" />
+            android:layout_gravity="bottom|left"
+            app:srcCompat="@drawable/arrow_left" />
+        app:srcCompat="@drawable/arrow_right" />
+
             <ImageButton
                 android:id="@+id/image_button_right"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
                 app:srcCompat="@drawable/arrow_right" />
-                app:srcCompat="@drawable/arrow_right" />
-        </LinearLayout>
+            app:srcCompat="@drawable/arrow_right" />
+    </FrameLayout>
 
-
-    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
